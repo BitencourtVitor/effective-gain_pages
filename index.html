@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Painel | Effective Gain</title>
+</head>
+<body class="bg-screen-light" style="height: 100vh; overflow: hidden;">
+
+    <div class="d-flex h-100">
+
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-form-light h-100 sidebar sidebar-collapsed">
+
+            <div id="sidebar-top" style="height: 10%; width: 100%;" class="p-2 d-flex flex-row align-items-center justify-content-evenly">
+
+                <img src="assets/favicon.png" alt="Logo" class="img-fluid" style="height: auto; width: 65%;">
+                
+            </div>
+            <div style="flex-grow: 1; width: 100%;" id="sidebar-body" class="d-flex flex-column align-items-center justify-content-start my-5 gap-3">
+
+                <button id="dashboard" data-bs-toggle="tooltip" data-bs-placement="right"data-bs-title="Dashboard" class="btn btn-1-light btn-selected d-flex flex-row align-items-center justify-content-start gap-2">
+                    <i class="bi bi-speedometer2"></i>
+                    <span class="sidebar-label d-none">Dashboard</span>
+                </button>
+
+                <button id="chats" data-bs-toggle="tooltip" data-bs-placement="right"data-bs-title="Chats"
+                class="btn btn-2-light">
+                    <i class="bi bi-chat-dots"></i>
+                    <span class="sidebar-label d-none">Chats</span>
+                </button>
+
+                <button id="usuarios" data-bs-toggle="tooltip" data-bs-placement="right"data-bs-title="Usuários" class="btn btn-2-light">
+                    <i class="bi bi-people"></i>
+                    <span class="sidebar-label d-none">Usuários</span>
+                </button>
+
+                <button id="lembretes" data-bs-toggle="tooltip" data-bs-placement="right"data-bs-title="Lembretes" class="btn btn-2-light">
+                    <i class="bi bi-bell"></i>
+                    <span class="sidebar-label d-none">Lembretes</span>
+                </button>
+
+                <button id="relatorios" data-bs-toggle="tooltip" data-bs-placement="right"data-bs-title="Relatórios" class="btn btn-2-light">
+                    <i class="bi bi-bar-chart-line"></i>
+                    <span class="sidebar-label d-none">Relatórios</span>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="d-flex flex-column flex-grow-1">
+            <!-- Header -->
+            <div class="header-light ps-1 pe-4 d-flex align-items-center justify-content-between" style="height: 10%;">
+
+                <button data-bs-toggle="tooltip" data-bs-placement="right"data-bs-title="Expandir/Retrair" id="toggleSidebar" class="btn btn-3-light p-1">
+                    <i class="bi bi-arrow-bar-right"></i>
+                </button>
+
+                <div id="header-title" class="d-flex flex-column align-items-center justify-content-start">
+                    <h4 class="header-text-light mb-0">Bem vindo, <span id="username">Vitor Manoel Bitencourt Araújo</span></h4>
+                    <h6 class="header-text-light"><span id="role">Admin Primário</span> | <span id="empresa">Cartão de TODOS - Nova Iguaçu</span></h6>
+                </div>
+
+                <div class="d-flex flex-row align-items-center gap-2">
+                    <button type="button" data-bs-toggle="tooltip"data-bs-placement="right"data-bs-title="Mudar Tema" class="btn btn-2-light toggle-light" onclick="toggleTheme()">
+                        <i class="bi bi-sun"></i>
+                    </button>
+                    <button type="button" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Sair" class="btn btn-2-light toggle-light">
+                            <i class="bi bi-door-open"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="main-light pe-3 pb-3" style="flex-grow: 1;" id="main">
+
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

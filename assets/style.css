@@ -445,7 +445,6 @@ a {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
-
 .chat {
     border-radius: var(--bs-border-radius);
 }
@@ -464,4 +463,32 @@ a {
 .chat-list-dark {
     border-right: 1px solid var(--border-color-dark);
     border-color: var(--border-color-dark);
+}
+.icon-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.table {
+    border-radius: var(--bs-border-radius);
+}
+.custom-table {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.custom-table thead {
+background-color: #343a40; /* cor do header */
+color: #fff; /* texto do header */
+}
+
+.custom-table th,
+.custom-table td {
+color: #333; /* cor do texto geral */
+vertical-align: middle;
+}
+
+.custom-table tbody tr:hover {
+background-color: #f1f1f1;
 }

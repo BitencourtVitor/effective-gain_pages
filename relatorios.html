@@ -1,63 +1,51 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Relatórios</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    .icon-btn {
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
-  <div class="container mt-5">
-    <div class="d-flex justify-content-between align-items-center mb-3">
-      <h2>Relatórios</h2>
+  <div class="h-100 w-100 mx-2">
+    <div class="d-flex justify-content-end align-items-center mb-3">
       <div class="d-flex gap-2">
         <button class="btn btn-danger"><i class="bi bi-file-earmark-pdf-fill me-1"></i> Baixar PDF</button>
         <button class="btn btn-success"><i class="bi bi-file-earmark-excel-fill me-1"></i> Baixar Excel</button>
       </div>
     </div>
 
-    <table class="table table-bordered table-hover">
-      <thead class="table-light">
-        <tr>
-          <th>Nome do Cliente</th>
-          <th>Telefone</th>
-          <th>Resumo da Conversa (IA)</th>
-          <th>Interação Humana</th>
-          <th>Assertividade</th>
-          <th>Ticket Finalizado</th>
-          <th>Próxima Etapa (IA)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Ana Souza</td>
-          <td>(11) 91234-5678</td>
-          <td>Cliente demonstrou interesse no plano premium. Solicitou mais detalhes.</td>
-          <td>Sim</td>
-          <td>Alta</td>
-          <td>Sim</td>
-          <td>Enviar proposta por e-mail</td>
-        </tr>
-        <tr>
-          <td>Lucas Lima</td>
-          <td>(21) 99876-5432</td>
-          <td>Cliente teve dúvidas sobre formas de pagamento.</td>
-          <td>Não</td>
-          <td>Média</td>
-          <td>Não</td>
-          <td>Agendar ligação de suporte</td>
-        </tr>
-        <!-- + outros relatórios -->
-      </tbody>
-    </table>
+    <div class="table-responsive custom-table-light">
+      <table class="table table-bordered table-hover m-0">
+        <thead>
+          <tr>
+            <th>Nome do Cliente</th>
+            <th>Telefone</th>
+            <th>Resumo da Conversa (IA)</th>
+            <th>Interação Humana</th>
+            <th>Assertividade</th>
+            <th>Ticket Finalizado</th>
+            <th>Próxima Etapa (IA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ana Souza</td>
+            <td>(11) 91234-5678</td>
+            <td>Cliente demonstrou interesse no plano premium. Solicitou mais detalhes.</td>
+            <td>Sim</td>
+            <td>Alta</td>
+            <td>Sim</td>
+            <td>Enviar proposta por e-mail</td>
+          </tr>
+          <tr>
+            <td>Lucas Lima</td>
+            <td>(21) 99876-5432</td>
+            <td>Cliente teve dúvidas sobre formas de pagamento.</td>
+            <td>Não</td>
+            <td>Média</td>
+            <td>Não</td>
+            <td>Agendar ligação de suporte</td>
+          </tr>
+          <!-- + outros relatórios -->
+        </tbody>
+      </table>
+    </div>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

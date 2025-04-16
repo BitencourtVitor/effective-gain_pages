@@ -445,3 +445,23 @@ a {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
 }
+
+.chat {
+    border-radius: var(--bs-border-radius);
+}
+.chat-light {
+    background-color: var(--input-bg-color-light);
+    border: 1px solid var(--border-color-light);
+}
+.chat-dark {
+    background-color: var(--input-bg-color-dark);
+    border: 1px solid var(--border-color-dark);
+}
+.chat-list-light {
+    border-right: 1px solid var(--border-color-light);
+    border-color: var(--border-color-light);
+}
+.chat-list-dark {
+    border-right: 1px solid var(--border-color-dark);
+    border-color: var(--border-color-dark);
+}

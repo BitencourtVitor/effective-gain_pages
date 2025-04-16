@@ -520,3 +520,15 @@ a {
 .table-hover tbody tr:hover td {
     color: var(--color-light);
 }
+.schedule-view { display: none; }
+.schedule-view.active { display: block; }
+.hour-cell {
+  border-bottom: 1px solid #dee2e6;
+  padding: 8px;
+}
+.highlight {
+  background-color: #e7f3ff;
+}
+.text-muted {
+    color: var(--placeholder-color);
+}

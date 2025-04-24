@@ -411,6 +411,14 @@ document.addEventListener('DOMContentLoaded', function () {
     loadPageContent('chats.html');
   });
 
+  document.getElementById('kanban').addEventListener('click', () => {
+    loadPageContent('kanban.html');
+  });
+
+  document.getElementById('disparos').addEventListener('click', () => {
+    loadPageContent('disparos.html');
+  });
+
   document.getElementById('usuarios').addEventListener('click', () => {
     loadPageContent('usuarios.html');
   });

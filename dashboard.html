@@ -1,141 +1,155 @@
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <!-- Coluna 1 -->
-        <div class="col-4 d-flex flex-column gap-3">
+<div class="d-flex flex-column gap-0 w-100 h-100">
+    <div class="d-flex justify-content-end align-items-center">
+        <div class="m-2 d-flex flex-row justify-content-end align-items-center" style="height: 40px; width: 25%;">
+            <span class="me-3 header-text-light">Filtro</span>
+            <select class="form-select form-light" aria-label="Default select example">
+                <option selected>Todos os setores</option>
+                <option value="1">Vendas</option>
+                <option value="2">Financeiro</option>
+                <option value="3">Relacionamento</option>
+            </select>
+        </div>
+    </div>
 
-            <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
-                <i class="bi bi-hourglass card-icon" style="font-size: 2.5rem;"></i>
-                <div class="d-flex flex-column align-items-start justify-content-start">
-                    <h6 class="card-subtitle-light m-0">Fila de Atendimento</h6>
-                    <h2 id="contatos-aguardando" class="header-text-light">2</h2>    
+    <div class="container-fluid">
+        <div class="row h-100">
+            <!-- Coluna 1 -->
+            <div class="col-4 d-flex flex-column gap-3">
+
+                <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
+                    <i class="bi bi-hourglass card-icon" style="font-size: 2.5rem;"></i>
+                    <div class="d-flex flex-column align-items-start justify-content-start">
+                        <h6 class="card-subtitle-light m-0">Fila de Atendimento</h6>
+                        <h2 id="contatos-aguardando" class="header-text-light">2</h2>
+                    </div>
+                    <div>
+                        <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Leads que optaram por receber atendimento humano e aguardam na fila."></i>
+                    </div>
                 </div>
-                <div>
-                    <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Leads que optaram por receber atendimento humano e aguardam na fila."></i>
+
+                <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
+                    <i class="bi bi-person-check card-icon" style="font-size: 2.5rem;"></i>
+                    <div class="d-flex flex-column align-items-start justify-content-start">
+                        <h6 class="card-subtitle-light m-0">Atendentes online</h6>
+                        <h2 id="atendentes-online" class="header-text-light">0</h2>
+                    </div>
+                    <div>
+                        <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Total de atendentes humanos atendendo no momento."></i>
+                    </div>
                 </div>
+
+                <div class="card p-3 card-light">
+
+                    <h6 class="card-subtitle-light">Atendentes</h6>
+
+                    <ul id="lista-atendentes" class="list-unstyled mb-0 d-flex flex-column lista-tabela">
+
+                        <li class="d-flex justify-content-between table-header-light px-2 py-1">
+                            <span>Nome</span>
+                            <span>Setor</span>
+                            <span>Status</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+                            
             </div>
 
-            <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
-                <i class="bi bi-person-check card-icon" style="font-size: 2.5rem;"></i>
-                <div class="d-flex flex-column align-items-start justify-content-start">
-                    <h6 class="card-subtitle-light m-0">Atendentes online</h6>
-                    <h2 id="atendentes-online" class="header-text-light">0</h2>
+            <!-- Coluna 2 -->
+            <div class="col-4 d-flex flex-column gap-3">
+                <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
+                    <i class="bi bi-cpu card-icon" style="font-size: 2.5rem;"></i>
+                    <div class="d-flex flex-column align-items-start justify-content-start">
+                        <h6 class="card-subtitle-light m-0">Contatos com IA</h6>
+                        <h2 id="contatos-ia" class="header-text-light">0</h2>
+                    </div>
+                    <div>
+                        <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Conversas em andamento mediadas exclusivamente pela IA."></i>
+                    </div>
                 </div>
-                <div>
-                    <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Total de atendentes humanos atendendo no momento."></i>
+
+                <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
+                    <i class="bi bi-clock-history card-icon" style="font-size: 2.5rem;"></i>
+                    <div class="d-flex flex-column align-items-start justify-content-start">
+                        <h6 class="card-subtitle-light m-0">Esperando Atendente</h6>
+                        <h2 id="esperando-atendente" class="header-text-light">0</h2>
+                    </div>
+                    <div>
+                        <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Contatos que terminaram com a IA e aguardam um atendente humano."></i>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card p-3 card-light">
+                <div class="card p-3 card-light">
 
-                <h6 class="card-subtitle-light">Atendentes</h6>
+                    <h6 class="card-subtitle-light">Ranking - Conversas Encerradas</h6>
 
-                <ul id="lista-atendentes" class="list-unstyled mb-0 d-flex flex-column lista-tabela">
-
-                    <li class="d-flex justify-content-between table-header-light px-2 py-1">
-                        <span>Nome</span>
-                        <span>Setor</span>
-                        <span>Status</span>
-                    </li>
-
-                </ul>
-
-            </div>
+                    <div class="btn-group px-5 py-2" role="group">
+                        <input type="radio" class="btn-check" name="ranking-conversas" id="btnradio1" autocomplete="off" checked>
+                        <label class="btn btn-primary btn-label-light" for="btnradio1">Diário</label>
                         
-        </div>
-
-        <!-- Coluna 2 -->
-        <div class="col-4 d-flex flex-column gap-3">
-            <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
-                <i class="bi bi-cpu card-icon" style="font-size: 2.5rem;"></i>
-                <div class="d-flex flex-column align-items-start justify-content-start">
-                    <h6 class="card-subtitle-light m-0">Contatos com IA</h6>
-                    <h2 id="contatos-ia" class="header-text-light">0</h2>
-                </div>
-                <div>
-                    <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Conversas em andamento mediadas exclusivamente pela IA."></i>
-                </div>
-            </div>
-
-            <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
-                <i class="bi bi-clock-history card-icon" style="font-size: 2.5rem;"></i>
-                <div class="d-flex flex-column align-items-start justify-content-start">
-                    <h6 class="card-subtitle-light m-0">Esperando Atendente</h6>
-                    <h2 id="esperando-atendente" class="header-text-light">0</h2>
-                </div>
-                <div>
-                    <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Contatos que terminaram com a IA e aguardam um atendente humano."></i>
-                </div>
-            </div>
-
-            <div class="card p-3 card-light">
-
-                <h6 class="card-subtitle-light">Ranking - Conversas Encerradas</h6>
-
-                <div class="btn-group px-5 py-2" role="group">
-                    <input type="radio" class="btn-check" name="ranking-conversas" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn btn-primary btn-label-light" for="btnradio1">Diário</label>
+                        <input type="radio" class="btn-check" name="ranking-conversas" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-primary btn-label-light" for="btnradio2">Semanal</label>
+                        
+                        <input type="radio" class="btn-check" name="ranking-conversas" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-primary btn-label-light" for="btnradio3">Mensal</label>
+                    </div>
                     
-                    <input type="radio" class="btn-check" name="ranking-conversas" id="btnradio2" autocomplete="off">
-                    <label class="btn btn-primary btn-label-light" for="btnradio2">Semanal</label>
-                    
-                    <input type="radio" class="btn-check" name="ranking-conversas" id="btnradio3" autocomplete="off">
-                    <label class="btn btn-primary btn-label-light" for="btnradio3">Mensal</label>
+                    <ul id="ranking-conversas" class="mb-0 d-flex flex-column lista-tabela ps-0">
+                        <li class="d-flex justify-content-between table-header-light px-2 py-1">
+                            <span style="width: 20%"></span>
+                            <span style="width: 50%">Nome</span>
+                            <span style="width: 30%; text-align: right">Total</span>
+                        </li>
+                    </ul>
+                                        
                 </div>
-                  
-                <ul id="ranking-conversas" class="mb-0 d-flex flex-column lista-tabela ps-0">
-                    <li class="d-flex justify-content-between table-header-light px-2 py-1">
-                        <span style="width: 20%"></span>
-                        <span style="width: 50%">Nome</span>
-                        <span style="width: 30%; text-align: right">Total</span>
-                    </li>
-                </ul>
-                                    
-            </div>
-            
-        </div>
-
-        <!-- Coluna 3 -->
-        <div class="col-4 d-flex flex-column gap-3">
-            <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
-                <i class="bi bi-stopwatch card-icon" style="font-size: 2.5rem;"></i>
-                <div class="d-flex flex-column align-items-start justify-content-start">
-                    <h6 class="card-subtitle-light m-0">Tempo médio de resposta</h6>
-                    <h2 id="tempo-resposta" class="header-text-light">--</h2>
-                </div>
-                <div>
-                    <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tempo médio que o atendente leva para responder após o contato ir para a fila de atendimento."></i>
-                </div>
-            </div>
-
-            <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
-                <i class="bi bi-hourglass-split card-icon" style="font-size: 2.5rem;"></i>
-                <div class="d-flex flex-column align-items-start justify-content-start">
-                    <h6 class="card-subtitle-light m-0">Tempo médio de resolução</h6>
-                    <h2 id="tempo-resolucao" class="header-text-light">--</h2>
-                </div>
-                <div>
-                    <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tempo médio desde o início da intervenção do atendente até o encerramento."></i>
-                </div>
-            </div>
-
-            <div class="card p-3 card-light">
-
-                <h6 class="card-subtitle-light">Ranking - Tempo de Resposta</h6>
-
-                <div class="btn-group px-5 py-2" role="group">
-                    <input type="radio" class="btn-check" name="ranking-tempo" id="btnradio4" autocomplete="off" checked>
-                    <label class="btn btn-primary btn-label-light" for="btnradio4">Diário</label>
-                    
-                    <input type="radio" class="btn-check" name="ranking-tempo" id="btnradio5" autocomplete="off">
-                    <label class="btn btn-primary btn-label-light" for="btnradio5">Semanal</label>
-                    
-                    <input type="radio" class="btn-check" name="ranking-tempo" id="btnradio6" autocomplete="off">
-                    <label class="btn btn-primary btn-label-light" for="btnradio6">Mensal</label>
-                </div>
-
-                <ul id="ranking-tempo" class="mb-0 d-flex flex-column lista-tabela ps-0">
-                </ul>
                 
+            </div>
+
+            <!-- Coluna 3 -->
+            <div class="col-4 d-flex flex-column gap-3">
+                <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
+                    <i class="bi bi-stopwatch card-icon" style="font-size: 2.5rem;"></i>
+                    <div class="d-flex flex-column align-items-start justify-content-start">
+                        <h6 class="card-subtitle-light m-0">Tempo médio de resposta</h6>
+                        <h2 id="tempo-resposta" class="header-text-light">--</h2>
+                    </div>
+                    <div>
+                        <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tempo médio que o atendente leva para responder após o contato ir para a fila de atendimento."></i>
+                    </div>
+                </div>
+
+                <div class="card card-light p-2 d-flex flex-row align-items-center justify-content-evenly">
+                    <i class="bi bi-hourglass-split card-icon" style="font-size: 2.5rem;"></i>
+                    <div class="d-flex flex-column align-items-start justify-content-start">
+                        <h6 class="card-subtitle-light m-0">Tempo médio de resolução</h6>
+                        <h2 id="tempo-resolucao" class="header-text-light">--</h2>
+                    </div>
+                    <div>
+                        <i class="bi bi-question-circle question-light" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tempo médio desde o início da intervenção do atendente até o encerramento."></i>
+                    </div>
+                </div>
+
+                <div class="card p-3 card-light">
+
+                    <h6 class="card-subtitle-light">Ranking - Tempo de Resposta</h6>
+
+                    <div class="btn-group px-5 py-2" role="group">
+                        <input type="radio" class="btn-check" name="ranking-tempo" id="btnradio4" autocomplete="off" checked>
+                        <label class="btn btn-primary btn-label-light" for="btnradio4">Diário</label>
+                        
+                        <input type="radio" class="btn-check" name="ranking-tempo" id="btnradio5" autocomplete="off">
+                        <label class="btn btn-primary btn-label-light" for="btnradio5">Semanal</label>
+                        
+                        <input type="radio" class="btn-check" name="ranking-tempo" id="btnradio6" autocomplete="off">
+                        <label class="btn btn-primary btn-label-light" for="btnradio6">Mensal</label>
+                    </div>
+
+                    <ul id="ranking-tempo" class="mb-0 d-flex flex-column lista-tabela ps-0">
+                    </ul>
+                    
+                </div>
             </div>
         </div>
     </div>
